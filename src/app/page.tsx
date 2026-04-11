@@ -165,7 +165,7 @@ export default function BookingPage() {
             alt="Real Advertise" 
             width={700} 
             height={100} 
-            className="w-[180px] sm:w-[220px] h-auto object-contain"
+            className="w-[180px] sm:w-[195px] h-auto object-contain"
             priority
           />
         </Link>
