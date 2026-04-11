@@ -163,9 +163,9 @@ export default function BookingPage() {
           <Image 
             src="/logo.svg" 
             alt="Real Advertise" 
-            width={175} 
-            height={25} 
-            className="w-[130px] sm:w-[150px] h-auto object-contain"
+            width={700} 
+            height={100} 
+            className="w-[180px] sm:w-[220px] h-auto object-contain"
             priority
           />
         </Link>

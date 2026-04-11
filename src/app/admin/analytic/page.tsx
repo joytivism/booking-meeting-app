@@ -14,7 +14,7 @@ export default function AnalyticPlaceholder() {
       <header className="sticky top-0 z-50 flex h-[80px] items-center justify-between border-b border-gray-100 bg-[#ffffff] px-8 shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
         {/* Kiri: Logo */}
         <div className="flex items-center">
-          <Image src="/logo.svg" alt="Real Advertise" width={140} height={20} className="w-[120px] h-auto object-contain" />
+          <Image src="/logo.svg" alt="Real Advertise" width={700} height={100} className="w-[170px] h-auto object-contain" />
         </div>
 
         {/* Tengah: Navigasi Pill */}
