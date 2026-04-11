@@ -20,7 +20,7 @@ function Slide({ children, active, scrollable = false }: { children: React.React
     <div className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
       active ? 'opacity-100 translate-y-0 z-10' : 'opacity-0 translate-y-8 pointer-events-none -z-10'
     }`}>
-      <div className={`w-full max-w-3xl mx-auto px-4 sm:px-6 ${
+      <div className={`w-full max-w-3xl mx-auto px-6 sm:px-8 ${
         scrollable ? 'max-h-[calc(100vh-160px)] overflow-y-auto scrollbar-hide py-10' : ''
       }`}>
         {children}
