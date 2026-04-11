@@ -9,6 +9,7 @@ import {
   CheckCircle2, AlertCircle, ArrowDownRight, ArrowUpRight, 
   BarChart3, Search, Mail, Building, History, FileText, Check, Plus, UploadCloud, Trash2, X, Menu, LogOut
 } from "lucide-react";
+import Image from "next/image";
 
 /* ───────────────────── LoginForm Component ───────────────────── */
 function LoginForm({ onSuccess }: { onSuccess: () => void }) {
@@ -41,8 +42,8 @@ function LoginForm({ onSuccess }: { onSuccess: () => void }) {
       <div className="w-full max-w-sm">
         <div className="rounded-2xl bg-white p-8 shadow-sm border border-gray-200">
           <div className="mb-8 text-center">
-            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-white">
-              <LayoutDashboard size={24} />
+            <div className="mx-auto mb-4 flex items-center justify-center">
+              <Image src="/logo.svg" alt="Real Advertise" width={120} height={30} className="h-8 w-auto" />
             </div>
             <h1 className="text-2xl font-bold text-gray-900">Admin Login</h1>
           </div>
@@ -276,11 +277,8 @@ export default function AdminDashboard() {
       <aside className="fixed inset-y-0 left-0 w-64 bg-white border-r border-gray-200 hidden md:flex flex-col z-40">
         
         {/* Logo */}
-        <div className="flex items-center gap-2.5 px-6 h-16 border-b border-gray-100 shrink-0">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
-            <LayoutDashboard size={18} />
-          </div>
-          <span className="text-lg font-bold text-gray-900 tracking-tight">Real Advertise</span>
+        <div className="flex items-center px-6 h-16 border-b border-gray-100 shrink-0">
+          <Image src="/logo.svg" alt="Real Advertise" width={140} height={35} className="h-8 w-auto object-contain" />
         </div>
 
         {/* Central Nav Tabs */}
@@ -377,11 +375,8 @@ export default function AdminDashboard() {
 
       {/* ── Mobile Top Bar (Mobile Only) ── */}
       <div className="fixed top-0 left-0 right-0 h-14 bg-white border-b border-gray-200 flex md:hidden items-center justify-between px-4 z-40">
-        <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
-            <LayoutDashboard size={16} />
-          </div>
-          <span className="text-base font-bold text-gray-900 tracking-tight">Real Advertise</span>
+        <div className="flex items-center">
+          <Image src="/logo.svg" alt="Real Advertise" width={120} height={30} className="h-7 w-auto object-contain" />
         </div>
         <div className="flex items-center gap-2">
           {/* Mobile Notification */}

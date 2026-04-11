@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { User, Bell } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function HistoryPlaceholder() {
   const [showNotif, setShowNotif] = useState(false);
@@ -12,13 +12,8 @@ export default function HistoryPlaceholder() {
       {/* ── HEADER UTAMA ── */}
       <header className="sticky top-0 z-50 flex h-[80px] items-center justify-between border-b border-gray-100 bg-[#ffffff] px-8 shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
         {/* Kiri: Logo */}
-        <div className="flex items-center gap-3">
-          <div className="flex h-8 w-8 items-center justify-center rounded bg-[#ff6301]">
-            <svg className="h-5 w-5 text-[#ffffff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </div>
-          <span className="text-xl font-bold tracking-tight">Real Advertise</span>
+        <div className="flex items-center">
+          <Image src="/logo.svg" alt="Real Advertise" width={140} height={35} className="h-8 w-auto object-contain" />
         </div>
 
         {/* Tengah: Navigasi Pill */}

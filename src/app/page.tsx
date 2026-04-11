@@ -6,6 +6,7 @@ import { getNextWeekDays, getAvailableHours, formatTimeForDisplay } from "@/util
 import { submitBooking, getBookedSlots } from "@/app/actions/booking";
 import type { DayOption } from "@/types";
 import { Check, ChevronUp, ChevronDown, ArrowRight, LayoutDashboard, Calendar, Clock, AlertTriangle } from "lucide-react";
+import Image from "next/image";
 
 /* ───────────────────── Constants ───────────────────── */
 const MEETING_TYPES = [
@@ -158,11 +159,15 @@ export default function BookingPage() {
 
       {/* ── Header ── */}
       <div className="fixed top-0 left-0 right-0 z-50 flex h-14 sm:h-16 items-center justify-between px-4 sm:px-8 bg-white border-b border-gray-100">
-        <Link href="/" className="flex items-center gap-2.5 transition-transform hover:opacity-80">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gray-900 text-white">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-          </div>
-          <span className="text-base sm:text-lg font-bold tracking-tight text-gray-900">Real Advertise</span>
+        <Link href="/" className="flex items-center transition-transform hover:opacity-90">
+          <Image 
+            src="/logo.svg" 
+            alt="Real Advertise" 
+            width={160} 
+            height={40} 
+            className="h-8 sm:h-10 w-auto object-contain"
+            priority
+          />
         </Link>
         <Link href="/admin" className="text-xs font-semibold text-gray-500 hover:text-gray-900 transition-colors px-3 py-1.5 rounded-md hover:bg-gray-50">
           Login Admin
