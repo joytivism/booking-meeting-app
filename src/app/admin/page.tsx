@@ -43,7 +43,7 @@ function LoginForm({ onSuccess }: { onSuccess: () => void }) {
         <div className="rounded-2xl bg-white p-8 shadow-sm border border-gray-200">
           <div className="mb-8 text-center">
             <div className="mx-auto mb-4 flex items-center justify-center">
-              <Image src="/logo.svg" alt="Real Advertise" width={120} height={30} className="h-8 w-auto" />
+              <Image src="/logo.svg" alt="Real Advertise" width={140} height={20} className="w-[120px] h-auto object-contain" />
             </div>
             <h1 className="text-2xl font-bold text-gray-900">Admin Login</h1>
           </div>
@@ -278,7 +278,7 @@ export default function AdminDashboard() {
         
         {/* Logo */}
         <div className="flex items-center px-6 h-16 border-b border-gray-100 shrink-0">
-          <Image src="/logo.svg" alt="Real Advertise" width={140} height={35} className="h-8 w-auto object-contain" />
+          <Image src="/logo.svg" alt="Real Advertise" width={140} height={20} className="w-[120px] h-auto object-contain" />
         </div>
 
         {/* Central Nav Tabs */}
@@ -376,7 +376,7 @@ export default function AdminDashboard() {
       {/* ── Mobile Top Bar (Mobile Only) ── */}
       <div className="fixed top-0 left-0 right-0 h-14 bg-white border-b border-gray-200 flex md:hidden items-center justify-between px-4 z-40">
         <div className="flex items-center">
-          <Image src="/logo.svg" alt="Real Advertise" width={120} height={30} className="h-7 w-auto object-contain" />
+          <Image src="/logo.svg" alt="Real Advertise" width={105} height={15} className="w-[100px] h-auto object-contain" />
         </div>
         <div className="flex items-center gap-2">
           {/* Mobile Notification */}
