@@ -10,7 +10,7 @@ import {
   BarChart3, Search, Mail, Building, History, FileText, Check, Plus, UploadCloud, Trash2, X, Menu, LogOut
 } from "lucide-react";
 import Image from "next/image";
-import KanbanBoard from "@/components/kanban/KanbanBoard";
+
 
 /* ───────────────────── LoginForm Component ───────────────────── */
 function LoginForm({ onSuccess }: { onSuccess: () => void }) {
@@ -764,8 +764,7 @@ export default function AdminDashboard() {
           </div>
         )}
 
-        {/* Kanban Workflow Board */}
-        <KanbanBoard />
+
         </div>
         )}
 
