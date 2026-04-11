@@ -14,13 +14,23 @@ const KanbanBoard: React.FC = () => {
   const columns = ["New Request", "Approved", "Meeting Done", "Follow-up"];
 
   return (
-    <div className="w-full mt-12 mb-10 overflow-hidden">
-      <div className="mb-6 animate-fadeIn">
-        <h2 className="text-xl font-bold text-black font-sans tracking-tight">Workflow Pipeline</h2>
-        <p className="text-xs text-black/50 font-semibold font-sans mt-0.5 uppercase tracking-wider italic">Administrative Board View</p>
+    <div className="w-full mt-16 mb-12 p-10 rounded-[40px] bg-gray-50/20 border border-black/[0.02] shadow-[inset_0_2px_10px_rgba(0,0,0,0.01)] overflow-hidden">
+      {/* Header Pipeline Premium */}
+      <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12 animate-fadeIn px-4 gap-4">
+        <div className="flex flex-col gap-2">
+           <h2 className="text-2xl font-black text-black font-sans tracking-tighter">Workflow Pipeline</h2>
+           <div className="flex items-center gap-3">
+             <span className="h-1 w-8 bg-primary rounded-full"></span>
+             <p className="text-[10px] text-black/40 font-black font-sans uppercase tracking-[0.25em] leading-none">Administrative Pipeline Board</p>
+           </div>
+        </div>
+        <div className="flex items-center gap-4 bg-white/60 backdrop-blur-md px-4 py-2 rounded-2xl border border-black/[0.04] shadow-sm self-start sm:self-auto">
+           <div className="h-2 w-2 rounded-full bg-secondary animate-pulse"></div>
+           <span className="text-[10px] font-black text-black/50 uppercase tracking-widest whitespace-nowrap leading-none">Live Sync: Active</span>
+        </div>
       </div>
 
-      <div className="flex gap-8 overflow-x-auto pb-8 scrollbar-hide">
+      <div className="flex gap-10 overflow-x-auto pb-12 scrollbar-hide px-4">
         {columns.map((title) => (
           <KanbanColumn key={title} title={title}>
             {MOCK_DATA.filter(item => item.status === title).map(item => (
@@ -34,6 +44,11 @@ const KanbanBoard: React.FC = () => {
             ))}
           </KanbanColumn>
         ))}
+      </div>
+
+      {/* Footer hint */}
+      <div className="mt-2 flex justify-center opacity-30">
+        <div className="h-1 w-24 bg-black/10 rounded-full"></div>
       </div>
     </div>
   );
