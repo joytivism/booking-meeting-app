@@ -12,6 +12,10 @@ const MEETING_TYPES = [
   { value: "Consultation", label: "Consultation Session", key: "A" },
   { value: "Weekly", label: "Weekly Meeting", key: "B" },
   { value: "Biweekly", label: "Biweekly", key: "C" },
+  { value: "Onboarding", label: "Onboarding", key: "D" },
+  { value: "Evaluasi", label: "Evaluasi", key: "E" },
+  { value: "Discussion", label: "Discussion", key: "F" },
+  { value: "Monthly", label: "Monthly", key: "G" },
 ];
 
 /* ───────────────────── Reusable UI (outside render) ───────────────────── */
@@ -258,14 +262,14 @@ export default function BookingPage() {
                   className={`group flex w-full items-center gap-4 rounded-xl border p-4 text-left transition-all duration-200 ${
                     meetingType === type.value
                       ? 'border-primary bg-primary/5 ring-1 ring-primary'
-                      : 'border-gray-200 bg-white hover:border-gray-300 shadow-sm'
+                      : 'border-gray-200 bg-white shadow-sm'
                   }`}
                   style={{ animationDelay: `${150 + index * 50}ms`, animationFillMode: 'both' }}
                 >
                   <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border text-xs font-semibold transition-colors ${
                     meetingType === type.value
                       ? 'border-primary bg-primary text-white'
-                      : 'border-gray-200 bg-gray-50 text-gray-500 group-hover:border-gray-300 group-hover:text-gray-700'
+                      : 'border-gray-200 bg-gray-50 text-gray-500 group-hover:text-gray-700'
                   }`}>
                     {type.key}
                   </span>
@@ -317,7 +321,7 @@ export default function BookingPage() {
                           ? 'border-gray-100 bg-gray-50 opacity-50 cursor-not-allowed'
                           : isSelected
                           ? 'border-primary bg-primary/5 ring-1 ring-primary'
-                          : 'border-gray-200 bg-white hover:border-gray-300 shadow-sm hover:shadow active:scale-95'
+                          : 'border-gray-200 bg-white shadow-sm hover:shadow active:scale-95'
                       }`}
                     >
                       <span className={`text-xs font-medium uppercase tracking-wider mb-1 ${
@@ -359,7 +363,7 @@ export default function BookingPage() {
                               ? 'border-gray-100 bg-gray-50 text-gray-400 line-through cursor-not-allowed'
                               : selectedHour === hour
                               ? 'border-primary bg-primary text-white shadow-sm'
-                              : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300 hover:bg-gray-50 shadow-sm active:scale-95'
+                              : 'border-gray-200 bg-white text-gray-700 hover:bg-gray-50 shadow-sm active:scale-95'
                           }`}
                         >
                           {formatTimeForDisplay(hour)}

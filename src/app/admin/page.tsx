@@ -246,6 +246,10 @@ export default function AdminDashboard() {
                      <option value="Consultation">Consultation Session</option>
                      <option value="Weekly">Weekly Meeting</option>
                      <option value="Biweekly">Biweekly</option>
+                     <option value="Onboarding">Onboarding</option>
+                     <option value="Evaluasi">Evaluasi</option>
+                     <option value="Discussion">Discussion</option>
+                     <option value="Monthly">Monthly</option>
                   </select>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
@@ -681,7 +685,7 @@ export default function AdminDashboard() {
                  // Menggunakan bulan April 2026 sebagai sampel/basis dinamis berjalan
                  const dayBookings = data.filter(b => b.booking_date.includes(`-04-${dayStr}`));
                  
-                 let bgClass = "bg-gray-50 text-gray-400 border border-gray-100 hover:border-gray-300"; // Kosong putih-abu
+                 let bgClass = "bg-gray-50 text-gray-400 border border-gray-100"; // Kosong putih-abu
                  
                  if (dayBookings.length > 0) {
                    const done = dayBookings.filter(b => b.status === "Meeting Done").length;
@@ -740,7 +744,7 @@ export default function AdminDashboard() {
                         {dayBookings.map(b => {
                            const isApproved = b.status === "Approved" || b.status === "Meeting Done";
                            return (
-                             <div key={b.id} className="flex flex-col sm:flex-row sm:items-center justify-between p-3 sm:p-4 rounded-xl border border-gray-100 bg-gray-50 hover:bg-white hover:border-gray-200 hover:shadow-sm transition-all gap-3">
+                             <div key={b.id} className="flex flex-col sm:flex-row sm:items-center justify-between p-3 sm:p-4 rounded-xl border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-sm transition-all gap-3">
                                 <div className="flex items-center gap-3 sm:gap-4">
                                    <div className="hidden sm:flex h-10 w-10 items-center justify-center rounded-full bg-white border border-gray-200 text-gray-700 font-bold text-sm shrink-0">
                                       {b.brand_name.charAt(0).toUpperCase()}
