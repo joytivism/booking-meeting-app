@@ -42,9 +42,6 @@ function LoginForm({ onSuccess }: { onSuccess: () => void }) {
       <div className="w-full max-w-sm">
         <div className="rounded-2xl bg-white p-8 shadow-sm border border-gray-200">
           <div className="mb-8 text-center">
-            <div className="mx-auto mb-4 flex items-center justify-center">
-              <Image src="/logo.svg" alt="Real Advertise" width={700} height={100} className="w-[180px] h-auto object-contain" />
-            </div>
             <h1 className="text-2xl font-bold text-gray-900">Admin Login</h1>
           </div>
           {error && (
