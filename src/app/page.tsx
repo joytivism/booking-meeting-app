@@ -20,6 +20,13 @@ const MEETING_TYPES = [
 ];
 
 /* ───────────────────── Reusable UI (outside render) ───────────────────── */
+/**
+ * A transition wrapper for each slide screen in the booking flow.
+ *
+ * @param children - Slide content.
+ * @param active - Whether the slide is currently visible.
+ * @param scrollable - If true, enables vertical scrolling for large content.
+ */
 function Slide({ children, active, scrollable = false }: { children: React.ReactNode; active: boolean; scrollable?: boolean }) {
   return (
     <div className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
@@ -34,6 +41,13 @@ function Slide({ children, active, scrollable = false }: { children: React.React
   );
 }
 
+/**
+ * Primary button used to confirm a step or move ahead in the booking flow.
+ *
+ * @param onClick - Click handler.
+ * @param disabled - Button disabled state.
+ * @param label - Display label for the button.
+ */
 function OkButton({ onClick, disabled = false, label = "OK" }: { onClick: () => void; disabled?: boolean; label?: string }) {
   return (
     <div className="flex items-center gap-4 mt-8 animate-fadeIn" style={{ animationDelay: '200ms', animationFillMode: 'both' }}>
@@ -53,6 +67,9 @@ function OkButton({ onClick, disabled = false, label = "OK" }: { onClick: () => 
 }
 
 /* ───────────────── Component ───────────────── */
+/**
+ * Main booking page component that guides the user through a multi-step meeting reservation flow.
+ */
 export default function BookingPage() {
   const weekDays = useMemo(() => getNextWeekDays(), []);
 
@@ -75,6 +92,9 @@ export default function BookingPage() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   /* ── Fetch booked slots ── */
+  /**
+   * Retrieve all booked slots for the next visible week and store them locally.
+   */
   const fetchAllSlots = useCallback(async () => {
     setLoadingSlots(true);
     try {
@@ -140,6 +160,9 @@ export default function BookingPage() {
   }, []);
 
   /* ── Submit ── */
+  /**
+   * Submit the selected booking information and handle the result state.
+   */
   const handleSubmit = async () => {
     setError("");
     if (!selectedDay || !selectedHour) return;
@@ -149,9 +172,13 @@ export default function BookingPage() {
         brandName: name, email, secondaryEmail, meetingType,
         bookingDate: selectedDay.date, bookingTime: selectedHour,
       });
-      if (result.success) setStep(4); 
+      if (result.success) setStep(4);
       else { setError(result.error || "Gagal menyimpan booking."); fetchAllSlots(); }
-    } catch { setError("Terjadi kesalahan jaringan."); } finally { setLoading(false); }
+    } catch {
+      setError("Terjadi kesalahan jaringan.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
