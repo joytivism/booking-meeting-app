@@ -1,30 +1,36 @@
 # 📅 Booking Meeting App
 
-An open-source, lightweight, and efficient application designed to streamline the process of scheduling and managing meeting rooms. 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Next.js](https://img.shields.io/badge/Next.js-14-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
 
-## 🚀 Features
+**Booking Meeting App** adalah platform manajemen reservasi ruang pertemuan yang dirancang untuk menyederhanakan proses penjadwalan di lingkungan kantor atau komunitas. Dibangun dengan fokus pada kecepatan, keamanan, dan kemudahan penggunaan.
 
-* **Room Availability:** View real-time availability of meeting rooms.
-* **Easy Scheduling:** Book, update, or cancel meeting schedules seamlessly.
-* **User Management:** Role-based access for admins and regular users.
-* **Conflict Prevention:** Automatically prevents double-booking of the same room at the same time.
-* **Dashboard:** A clean overview of upcoming meetings.
+---
+
+## 🌟 Fitur Utama
+
+- **Real-time Room Availability:** Cek ketersediaan ruangan secara instan tanpa perlu menyegarkan halaman.
+- **Smart Scheduling:** Sistem cerdas yang mencegah tabrakan jadwal (*double-booking*).
+- **User Dashboard:** Kelola riwayat pemesanan dan jadwal mendatang dalam satu tampilan bersih.
+- **Role-based Access:** Pembedaan akses antara Admin (pengelola ruangan) dan User (peminjam).
+- **Email Notifications:** (Planned) Pengingat otomatis untuk jadwal rapat yang akan datang.
 
 ## 🛠️ Tech Stack
 
-*(Catatan: Kamu bisa mengubah bagian ini nanti sesuai dengan bahasa/framework yang kita pilih)*
-* **Frontend:** React / Next.js / Vue (TBD)
-* **Backend:** Node.js / Python / Go (TBD)
-* **Database:** PostgreSQL / MySQL / MongoDB (TBD)
+Aplikasi ini dibangun menggunakan teknologi modern untuk memastikan skalabilitas dan performa maksimal:
 
-## ⚙️ Getting Started
+- **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
+- **Language:** [TypeScript](https://www.typescriptlang.org/) untuk keamanan tipe data.
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) untuk antarmuka yang responsif.
+- **Database:** PostgreSQL (Planned with Prisma ORM).
+- **Authentication:** NextAuth.js (Planned).
 
-Instructions on how to set up the project locally will be added soon as the development progresses.
+## 🚀 Memulai (Getting Started)
 
-## 🤝 Contributing
+Ikuti langkah-langkah ini untuk menjalankan proyek secara lokal:
 
-We welcome contributions! If you have suggestions or find bugs, please open an issue or submit a pull request. Let's build a better booking system together.
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
+1. **Clone Repositori**
+   ```bash
+   git clone [https://github.com/joytivism/booking-meeting-app.git](https://github.com/joytivism/booking-meeting-app.git)
+   cd booking-meeting-app
