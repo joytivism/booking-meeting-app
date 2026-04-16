@@ -6,6 +6,8 @@
 
 **Booking Meeting App** adalah platform manajemen reservasi ruang pertemuan yang dirancang untuk menyederhanakan proses penjadwalan di lingkungan kantor atau komunitas. Dibangun dengan fokus pada kecepatan, keamanan, dan kemudahan penggunaan.
 
+**Live Demo:** [https://booking-meeting-app.vercel.app](https://booking-meeting-app.vercel.app)
+
 ---
 
 ## 🌟 Fitur Utama
