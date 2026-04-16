@@ -2,8 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Next.js](https://img.shields.io/badge/Next.js-14-black)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
-
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)![Testing: Vitest](https://img.shields.io/badge/Testing-Vitest-blue)
 **Booking Meeting App** adalah platform manajemen reservasi ruang pertemuan yang dirancang untuk menyederhanakan proses penjadwalan di lingkungan kantor atau komunitas. Dibangun dengan fokus pada kecepatan, keamanan, dan kemudahan penggunaan.
 
 **Live Demo:** [https://booking-meeting-app.vercel.app](https://booking-meeting-app.vercel.app)
@@ -27,6 +26,38 @@ Aplikasi ini dibangun menggunakan teknologi modern untuk memastikan skalabilitas
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/) untuk antarmuka yang responsif.
 - **Database:** PostgreSQL (Planned with Prisma ORM).
 - **Authentication:** NextAuth.js (Planned).
+
+## 🚀 Memulai (Getting Started)
+
+Ikuti langkah-langkah ini untuk menjalankan proyek secara lokal:
+
+1. **Clone Repositori**
+   ```bash
+   git clone [https://github.com/joytivism/booking-meeting-app.git](https://github.com/joytivism/booking-meeting-app.git)
+   cd booking-meeting-app
+```
+
+## 🧪 Testing
+
+Jalankan unit test dengan:
+
+```bash
+npm test
+```
+
+Untuk pengujian berkelanjutan dan coverage:
+
+```bash
+npm run test:ci
+```
+
+```bash
+npm run test:coverage
+```
+
+1. **`npm test`** menjalankan Vitest sekali.
+2. **`npm run test:ci`** menjalankan Vitest dengan coverage dan reporter dot.
+3. **`npm run test:coverage`** menghasilkan laporan coverage.
 
 ## 🚀 Memulai (Getting Started)
 
